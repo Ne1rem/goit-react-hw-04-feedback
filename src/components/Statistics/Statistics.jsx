@@ -1,3 +1,4 @@
+// Statistics.js
 import PropTypes from 'prop-types';
 import { ListFeedback, ItemFeedback, Number } from './Statistic.styled';
 
@@ -17,13 +18,13 @@ function Statistics({ good, neutral, bad, totalFeedback, positiveFeedback }) {
         Total: <Number>{totalFeedback}</Number>
       </ItemFeedback>
       <ItemFeedback>
-        Positive feedback: <Number>{positiveFeedback}</Number>
+        Positive feedback: <Number>{positiveFeedback}%</Number>
       </ItemFeedback>
     </ListFeedback>
   );
 }
 
-Statistics.propTyres = {
+Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
